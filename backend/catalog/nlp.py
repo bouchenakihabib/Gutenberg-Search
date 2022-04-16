@@ -19,7 +19,7 @@ def clean(st: str) -> str:
     return st
 
 
-# Stemming
+
 
 lem = WordNetLemmatizer()
 

@@ -54,7 +54,7 @@ class SearchViewSet(viewsets.ViewSet):
     serializer_class = SearchQuerySerializer
 
     def list(self, request):
-        serializer = self.serializer_class(data=request.query_params)  # or request.GET
+        serializer = self.serializer_class(data=request.query_params)  
         serializer.is_valid(raise_exception=True)
         keyword = serializer.validated_data.get('keyword')
         is_advanced = serializer.validated_data.get('advanced')
@@ -92,7 +92,7 @@ class AutoCompleteViewSet(viewsets.ViewSet):
     serializer_class = AutoCompleteSerializer
 
     def list(self, request):
-        serializer = self.serializer_class(data=request.query_params)  # or request.GET
+        serializer = self.serializer_class(data=request.query_params)
         serializer.is_valid(raise_exception=True)
         q = serializer.validated_data.get('q')
         if not q:
