@@ -13,7 +13,7 @@ export const API = (model = undefined, id = undefined) => {
     return `${URL}/api/`;
 };
 
-export const TIMEOUT = 120 * 1000; // in ms (2 minutes)
+export const TIMEOUT = 120 * 1000; 
 
 export const TITLE = (section) => `Gutenberg-Search - ${section}`;
 
